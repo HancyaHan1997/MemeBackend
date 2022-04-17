@@ -14,13 +14,33 @@ background: #333333;
 margin: 0 5px;
 }
 
-.front-upper-rectangle {
+#front-UL-upperbox {
 width: 262px;
 height: 102px;
 background: #FFB469;
 margin: 0 5px;
 }
 
+#front-UR-upperbox{
+  width: 262px;
+  height: 102px;
+  background: #54CBA4;
+  margin: 0 5px;
+  }
+  
+#front-LL-upperbox {
+    width: 262px;
+    height: 102px;
+    background: #A39FFF;
+    margin: 0 5px;
+    }
+
+#front-LR-upperbox {
+      width: 262px;
+      height: 102px;
+      background: #FF99E2;
+      margin: 0 5px;
+      }
 .front-lower-rectangle {
 width: 262px;
 height: 72px;
@@ -33,6 +53,13 @@ margin: 0 5px;
 .container{
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  margin: 5px 5px;
+}
+
+.rows{
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   margin: 0 5px;
 }
@@ -84,46 +111,244 @@ top: 30.17%;
 bottom: 43.02%;
 }
 
-.button{
-background: #FAFAFA;
-border: 1px solid #333333;
-box-sizing: border-box;
-position: absolute;
-height: 33px;
-width: 108px;
-left: 77px;
-top: 120px;
-border-radius: 0px;
-left: 31.3%;
-right: 24.8%;
-top: 67.04%;
-bottom: 14.53%;
+.back-button{
+  position: absolute;
+  left: 31.3%;
+  right: 24.8%;
+  top: 67.04%;
+  bottom: 14.53%;
+  
+  /* 背景色 */
+  
+  background: #FAFAFA;
+  /* 主色 */
+  
+  border: 1px solid #333333;
+  box-sizing: border-box;
 }
 
 .button-text{
-  position: absolute;
-  height: 48px;
-  height: 20px;
-  width: 74px;
-  left: 94px;
-  top: 126px;
-  border-radius: nullpx;
-  
-top: 70.39%;
-bottom: 18.44%;
-  font-family: 'Source Han Sans CN';
+  /* 进入话题 */
+display: flex;
+align-content: center;
+justify-content: center;
+
+
+/* 标题三 */
+
+font-family: 'Source Han Sans CN';
 font-style: normal;
 font-weight: 700;
 font-size: 14px;
 line-height: 21px;
 /* or 150% */
 
-text-align: center;
+text-align: justify;
 letter-spacing: 0.3em;
 
 /* 主色 */
 
 color: #333333;
+}
+
+#front-upper-titleUL{
+  position: absolute;
+left: 9.1%;
+right: 79.65%;
+top: 46.49%;
+bottom: 50.59%;
+  height: 27px;
+  width: 162px;
+  left: 60px;
+  top: 20px;
+  border-radius: nullpx;
+  
+
+
+/* 标题二 */
+
+font-family: 'Source Han Sans CN';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height, or 150% */
+
+text-align: center;
+letter-spacing: 0.2em;
+
+color: #B84501;
+}
+
+#front-upper-titleUR{
+  position: absolute;
+left: 9.1%;
+right: 79.65%;
+top: 46.49%;
+bottom: 50.59%;
+  height: 27px;
+  width: 162px;
+  left: 60px;
+  top: 20px;
+  border-radius: nullpx;
+  
+
+
+/* 标题二 */
+
+font-family: 'Source Han Sans CN';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height, or 150% */
+
+text-align: center;
+letter-spacing: 0.2em;
+
+color: #005827;
+}
+
+#front-upper-titleLL{
+  position: absolute;
+left: 9.1%;
+right: 79.65%;
+top: 46.49%;
+bottom: 50.59%;
+  height: 27px;
+  width: 162px;
+  left: 60px;
+  top: 20px;
+  border-radius: nullpx;
+  
+
+
+/* 标题二 */
+
+font-family: 'Source Han Sans CN';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height, or 150% */
+
+text-align: center;
+letter-spacing: 0.2em;
+
+color: #362FD0;
+}
+
+#front-upper-titleLR{
+  position: absolute;
+left: 9.1%;
+right: 79.65%;
+top: 46.49%;
+bottom: 50.59%;
+  height: 27px;
+  width: 162px;
+  left: 60px;
+  top: 20px;
+  border-radius: nullpx;
+  
+
+
+/* 标题二 */
+
+font-family: 'Source Han Sans CN';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height, or 150% */
+
+text-align: center;
+letter-spacing: 0.2em;
+
+color: #D629A8;
+}
+
+.author{
+  /* By @小高 */
+  position: absolute;
+  left: 12.43%;
+  right: 83.06%;
+  top: 50.38%;
+  bottom: 47.36%;
+  height: 21px;
+width: 65px;
+left: 100px;
+top: 50px;
+border-radius: nullpx;
+
+
+/* 用户名 */
+
+font-family: 'Source Han Sans CN';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+/* identical to box height, or 150% */
+
+text-align: center;
+letter-spacing: 0.05em;
+
+/* 背景色 */
+
+color: #FAFAFA;
+}
+
+.update-time{
+  /* 刚刚更新 */
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+
+/* 补充/辅助 */
+
+font-family: 'Source Han Sans CN';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 21px;
+/* identical to box height, or 175% */
+
+text-align: center;
+
+/* 主色 */
+
+color: #333333;
+
+}
+
+.data-size {
+
+/* 次级内容 */
+position: absolute;
+left: 7.57%;
+right: 77.71%;
+top: 57.93%;
+bottom: 39.81%;
+
+font-family: 'Source Han Sans CN';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+/* identical to box height, or 150% */
+
+text-align: center;
+height: 21px;
+width: 212px;
+left: 39px;
+top: 137px;
+border-radius: nullpx;
+
+/* 主色 */
+
+color: #333333;
+
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
