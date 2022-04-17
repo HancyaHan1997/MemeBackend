@@ -7,6 +7,124 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.back {
+width: 262px;
+height: 175px;
+background: #333333;
+margin: 0 5px;
+}
+
+.front-upper-rectangle {
+width: 262px;
+height: 102px;
+background: #FFB469;
+margin: 0 5px;
+}
+
+.front-lower-rectangle {
+width: 262px;
+height: 72px;
+background: #FAFAFA;
+border: 1px solid #666666;
+box-sizing: border-box;
+margin: 0 5px;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0 5px;
+}
+
+.back-title{
+  font-family: 'Source Han Sans CN';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height, or 150% */
+
+text-align: center;
+letter-spacing: 0.2em;
+
+color: #FFFFFF;
+height: 27px;
+width: 162px;
+left: 50px;
+top: 22px;
+border-radius: nullpx;
+position: absolute;
+left: 20.33%;
+right: 13.82%;
+top: 12.29%;
+bottom: 72.63%;
+}
+
+.back-text{
+  font-family: 'Source Han Sans CN';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+/* or 171% */
+
+text-align: center;
+letter-spacing: 0.025em;
+height: 48px;
+width: 193px;
+left: 35px;
+top: 54px;
+border-radius: nullpx;
+color: #FFFFFF;
+position: absolute;
+left: 14.23%;
+right: 7.32%;
+top: 30.17%;
+bottom: 43.02%;
+}
+
+.button{
+background: #FAFAFA;
+border: 1px solid #333333;
+box-sizing: border-box;
+position: absolute;
+height: 33px;
+width: 108px;
+left: 77px;
+top: 120px;
+border-radius: 0px;
+left: 31.3%;
+right: 24.8%;
+top: 67.04%;
+bottom: 14.53%;
+}
+
+.button-text{
+  position: absolute;
+  height: 48px;
+  height: 20px;
+  width: 74px;
+  left: 94px;
+  top: 126px;
+  border-radius: nullpx;
+  
+top: 70.39%;
+bottom: 18.44%;
+  font-family: 'Source Han Sans CN';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 21px;
+/* or 150% */
+
+text-align: center;
+letter-spacing: 0.3em;
+
+/* 主色 */
+
+color: #333333;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
