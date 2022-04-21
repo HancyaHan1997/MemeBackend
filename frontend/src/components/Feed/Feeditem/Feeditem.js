@@ -9,24 +9,26 @@ const Feeditem = (props) => {
   return (
     <li className="list">
       <div className="row">
-        <div>
-          <img src={anymHead} className="profile-pic"></img>
-        </div>
-
         <div className="feed-item">
           <div>
+            <img src={anymHead} className="profile-pic"></img>
             <span className="username">@匿名</span>
             <span className="time">· 2分钟前</span>
           </div>
 
-          <span className="feed-content"> {props.items.content}</span>
+          <div className="feed-content"> {props.items.content}</div>
+          <div className="reactions">
+            <span className="emoji_nums">
+              <img src={comment} /> {props.items.num_comments}
+            </span>
+            <span className="emoji_nums">
+              <img src={share} /> 0
+            </span>
+            <span className="emoji_nums">
+              <img src={heart} /> 0
+            </span>
+          </div>
         </div>
-      </div>
-
-      <div className="reactions">
-        <img src={comment} />
-        <img src={share} />
-        <img src={heart} />
       </div>
     </li>
   );

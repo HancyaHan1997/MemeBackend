@@ -1,11 +1,9 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
-import HomePage from "./pages/HomePage";
-import LoginPage from "./pages/LoginPage";
-import ErrorPage from "./pages/ErrorPage";
+import TopicPage from "./pages/Topic/TopicPage";
+import LoginPage from "./pages/Login/LoginPage";
 import PrivateRoute from "./utils/PrivateRoute";
-import Header from "./components/Header/Header";
 
 //nav content exist for all pages
 function App() {
@@ -15,8 +13,9 @@ function App() {
         <AuthProvider>
           <Routes>
             <Route exact path="/" element={<PrivateRoute />}>
-              <Route exact path="/" element={<HomePage />} />
+              <Route exact path="/" element={<TopicPage />} />
             </Route>
+
             <Route path="/login" element={<LoginPage />} />
             {/* <Route path="*" element={<ErrorPage />} /> */}
           </Routes>

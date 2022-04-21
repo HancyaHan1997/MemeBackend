@@ -18,6 +18,8 @@ export const AuthProvider = ({ children }) => {
       : null
   );
 
+  let [currentTopicId, getCurrentTopicId] = useState(1);
+
   let [loading, setLoading] = useState(true);
 
   let navigate = useNavigate();
@@ -83,11 +85,52 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  let postFeed = async (e) => {
+    e.preventDefault();
+    let feedUrl = "http://127.0.0.1:8000/Feeds/";
+
+    let response = await fetch(feedUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + String(authTokens.access),
+      },
+      body: JSON.stringify({
+        id: null,
+        title: "321",
+        content: e.target.feedContent.value,
+        visibility: "1",
+        anonymous: e.target.anonymous.value,
+        view_count: 1,
+        create_time: null,
+        parent_id: 1,
+        topic_id: 1,
+        user_id: 3,
+        parentFeed_id: 1,
+        parentStory_id: 1,
+        num_comments: 0,
+        num_shares: 0,
+        num_likes: 0,
+      }),
+    });
+
+    let data = await response.json();
+    console.log(data);
+    //we want to set it in our state (and local storage) to be used for private routes later
+    if (response.status === 200 || response.status === 202) {
+      alert("post submitted successfully! ");
+    } else {
+      alert("something went wrong");
+    }
+  };
+
   let contextData = {
     user: user,
     authTokens: authTokens,
     loginUser: loginUser,
     logoutUser: logoutUser,
+    postFeed: postFeed,
+    currentTopicId: currentTopicId,
   };
 
   useEffect(() => {
